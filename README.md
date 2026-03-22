@@ -30,8 +30,8 @@ Laua soovitamine ja valimine peab toimuma restorani saali plaanil. Juba broneeri
 
 2. <p> Laua soovitamine ja paigutuse loogika Kui kellaaeg ja inimeste arv on valitud, peab rakendus soovitama kliendile sobivaima laua(d). Soovitused tuleks kuvada restorani plaanil. Algoritm peaks püüdma laudu täita efektiivselt, kuid arvestama kliendi soove.</p>
 * Efektiivsus: 2-liikmelist seltskonda ei ole mõistlik paigutada 8-kohalisse lauda, kui saadaval on 2-kohaline laud.
-* Eelistused: Võimalus valida eelistusi nagu "Vaikne nurk / Privaatsus", "Akna all", "Laste mängunurga lähedal".<br>
-<p>Soovituse loogika on vabalt valitav. Näiteks võib vabadele laudadele omistada skoori, mis põhineb sellel, kui hästi laud vastab seltskonna suurusele (et ei jääks liiga palju tühje toole) ja kliendi eelistustele.</p><br>
+* Eelistused: Võimalus valida eelistusi nagu "Vaikne nurk / Privaatsus", "Akna all", "Laste mängunurga lähedal".
+<p>Soovituse loogika on vabalt valitav. Näiteks võib vabadele laudadele omistada skoori, mis põhineb sellel, kui hästi laud vastab seltskonna suurusele (et ei jääks liiga palju tühje toole) ja kliendi eelistustele.</p>
 
 3. <p>Visuaalne plaan Restorani suuruse ja laudade paigutuse võib vabalt valida (võib olla lihtne ruudustik või vabalt paigutatud objektid).</p>
 * Hõivatud lauad peavad olema visuaalselt eristatavad.
