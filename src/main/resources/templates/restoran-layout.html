@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Restaurant Layout </title>
+</head>
+<body>
+    <div>
+        <h1>Layout</h1>
+    </div>
+    <div class="layout-section">
+        <pre>
+            
+╔══════════════════════════════════════════════════════════════════╗
+║                         RESTAURANT LAYOUT                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                  ║
+║  ┌──────────┐     ┌────────────────────────────────────────┐     ║
+║  │ KITCHEN  │     │             OUTSIDE PATIO              │     ║
+║  │          │     │          P1(4) P2(2) P3(6) P4(4)       │     ║
+║  └────┬─────┘     └────────────────────────────────────────┘     ║
+║       │                                                          ║
+║  ┌────┴────────────────────────────────────────────────────┐     ║
+║  │                   MAIN DINING AREA                      │     ║
+║  │                                                         │     ║
+║  │   T1(2)  T2(4)  T3(4)        ┌──────────┐ ┌──────────┐  │     ║
+║  │                                                         │     ║
+║  │   T4(2)  T5(6)  T6(4)        │ PR1 (8)  │ │ PR2 (6)  │  │     ║
+║  │                              │   TV     │ │ Sliding  │  │     ║
+║  │   T7(2)  T8(4)               │  Quiet   │ │  Door    │  │     ║
+║  │                              └──────────┘ └──────────┘  │     ║
+║  └─────────────────────────────────────────────────────────┘     ║
+║                                                                  ║
+║  ┌────────────────────────┐    ┌────────────────────────────┐    ║
+║  │     WINDOW SEATS       │    │      CHILDREN'S AREA       │    ║
+║  │  W1(2) W2(4) W3(2)│    │                                 │    ║
+║  │  [Street view]         │    │   PLAY    │  K1(2)  K2(4)  │    ║
+║  │                        │    │   AREA    │ [High chairs]  │    ║
+║  └────────────────────────┘    │           │  RESTROOMS     │    ║
+║                                └────────────────────────────┘    ║
+║                                                                  ║
+║                     ENTRANCE  │   HOST DESK                      ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+┌─────────────────────────────────────────────────────────────┐
+│ ZONE          TABLES                    SEATS   NOTES       │
+├─────────────────────────────────────────────────────────────┤
+│ MAIN          T1(2) T2(4) T3(4) T4(2)   28      Kitchen     │
+│               T5(6) T6(4) T7(2) T8(4)            access     │
+├─────────────────────────────────────────────────────────────┤
+│ OUTSIDE       P1(4) P2(2) P3(6) P4(4)   16     Umbrellas    │
+├─────────────────────────────────────────────────────────────┤
+│ PRIVATE       PR1(8) PR2(6)             14     TV / Quiet   │
+├─────────────────────────────────────────────────────────────┤
+│ WINDOW        W1(2) W2(4) W3(2)         8       Street      │
+│ SEATS                                            view       │
+├─────────────────────────────────────────────────────────────┤
+│ CHILDREN      K1(2) K2(4)               6       Play area   │
+│                                                   Near      │
+│                                                 restrooms   │
+├─────────────────────────────────────────────────────────────┤
+│ TOTAL         19 tables                 72      seats       │
+└─────────────────────────────────────────────────────────────┘
+
+
+        </pre>
+    </div>
+    <div class="form-section">
+        <form action="/reserve" method="post">
+            <label>Your Name:</label>
+            <input type="text" name="customerName" required>
+    
+            <label>Table ID:</label>
+            <input type="text" name="tableId" placeholder="e.g., T1, W2, P3" required>
+    
+            <button type="submit">Reserve</button>
+        </form>
+
+        <div th:if="${reservedTable != null}">
+            <p><span th:text="${customerName}"></span> reserved table <span th:text="${reservedTable}"></span></p>
+        </div>
+
+    </div>
+</body>
