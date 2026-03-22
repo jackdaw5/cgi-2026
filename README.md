@@ -37,8 +37,9 @@ Laua soovitamine ja valimine peab toimuma restorani saali plaanil. Juba broneeri
 * Hõivatud lauad peavad olema visuaalselt eristatavad.
 * Soovitatud laud peaks olema esile tõstetud.<br>
 
-4. "Kui aega jääb üle"
-Kui tunned, et tahaksid teha midagi veel, et sinu töö eriliselt silma paistaks, on siin mõned ideed (kuid sinu fantaasia on piiriks)<br>
+4. "Kui aega jääb üle"<br>
+<p>Kui tunned, et tahaksid teha midagi veel, et sinu töö eriliselt silma paistaks, on siin mõned ideed (kuid sinu fantaasia on piiriks)</p><br>
+
 * Dünaamiline laudade liitmine: Kui suurt seltskonda (nt 10 inimest) ei saa paigutada ühte lauda, soovitab süsteem kahte kõrvuti asuvat lauda, mida saab kokku lükata.
 * Arvesta keskmise külastuse ajaga: 2-3h möödudes võiks eeldada, et konkreetne laud on uuesti broneeringuteks saadaval.
 * Admin vaade: Lihtne liides restorani omanikule, kus ta saab hiirega lohistades laudade paigutust muuta.
