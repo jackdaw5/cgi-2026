@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title> Restaurant Layout </title>
@@ -13,6 +13,7 @@
             
 ╔══════════════════════════════════════════════════════════════════╗
 ║                         RESTAURANT LAYOUT                        ║
+║                     OPEN FROM 9AM - 9PM ALL DAYS                 ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
 ║  ┌──────────┐     ┌────────────────────────────────────────┐     ║
@@ -67,20 +68,39 @@
 
         </pre>
     </div>
-    <div class="form-section">
-        <form action="/reserve" method="post">
-            <label>Your Name:</label>
-            <input type="text" name="customerName" required>
-    
-            <label>Table ID:</label>
-            <input type="text" name="tableId" placeholder="e.g., T1, W2, P3" required>
-    
-            <button type="submit">Reserve</button>
-        </form>
-
-        <div th:if="${reservedTable != null}">
-            <p><span th:text="${customerName}"></span> reserved table <span th:text="${reservedTable}"></span></p>
-        </div>
-
+    <div th:if="${successMessage != null}">
+        <span th:text="${successMessage}"></span>
     </div>
+
+    <div th:if="${errorMessage != null}">
+        <span th:text="${errorMessage}"></span>
+    </div>
+
+    <div th:if="${!reservations.isEmpty()}">
+        <h3>Current Reservations:</h3>
+        <ul>
+            <li th:each="r : ${reservations}">
+                <strong>Table <span th:text="${r.tableId}"></span></strong> → 
+                <span th:text="${r.customerName}"></span> on 
+                <span th:text="${r.date}"></span>
+                <span th:text="${r.time}"></span>
+            </li>
+        </ul>
+    </div>
+
+    <form action="/reserve" method="post">
+        <label>Your Name:</label>
+        <input type="text" name="customerName" required>
+        
+        <label>Table ID:</label>
+        <input type="text" name="tableId" placeholder="e.g., T1, W2, P3" required>
+        
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <label>Time:</label>
+        <input type="text" name="time" placeholder="e.g., 7:30 PM, 14:00" required>
+        
+        <button type="submit">Reserve</button>
+    </form>
 </body>

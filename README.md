@@ -4,7 +4,7 @@
 
 ---
 
->Lahenduse hilja esitamise põhjus on ülikooli õppimisega tõttu. Mul oli 4+ nädala järjesti suured ja olulised kontrolltööd. Ikka tahan proovida ja lahendada nii palju kui saan.
+>Lahenduse hilja esitamise põhjus on ülikoolis õppimine. Mul oli 4+ nädala järjesti suured ja olulised kontrolltööd. Ikka tahtsin proovida ja lahendada nii palju kui saan.
 
 ---
 
@@ -23,17 +23,17 @@ Laua soovitamine ja valimine peab toimuma restorani saali plaanil. Juba broneeri
 
 ### Lahenduse etapid
 
-1. <p>Broneeringu otsing ja filtreerimine Kasutaja peaks alguses nägema restorani saaliplaani või ajakava. Kasutaja peab saama otsingut filtreerida. Näited filtritest (nimekiri ei ole lõplik):</p><br>
+1. <p>Broneeringu otsing ja filtreerimine Kasutaja peaks alguses nägema restorani saaliplaani või ajakava. Kasutaja peab saama otsingut filtreerida. Näited filtritest (nimekiri ei ole lõplik):</p>
 * Kuupäev ja kellaaeg
 * Inimeste arv (seltskonna suurus)
 * Tsoon (nt terrass, sisesaal, privaatruum)<br>
 
-2. <p> Laua soovitamine ja paigutuse loogika Kui kellaaeg ja inimeste arv on valitud, peab rakendus soovitama kliendile sobivaima laua(d). Soovitused tuleks kuvada restorani plaanil. Algoritm peaks püüdma laudu täita efektiivselt, kuid arvestama kliendi soove.</p><br>
+2. <p> Laua soovitamine ja paigutuse loogika Kui kellaaeg ja inimeste arv on valitud, peab rakendus soovitama kliendile sobivaima laua(d). Soovitused tuleks kuvada restorani plaanil. Algoritm peaks püüdma laudu täita efektiivselt, kuid arvestama kliendi soove.</p>
 * Efektiivsus: 2-liikmelist seltskonda ei ole mõistlik paigutada 8-kohalisse lauda, kui saadaval on 2-kohaline laud.
 * Eelistused: Võimalus valida eelistusi nagu "Vaikne nurk / Privaatsus", "Akna all", "Laste mängunurga lähedal".<br>
 <p>Soovituse loogika on vabalt valitav. Näiteks võib vabadele laudadele omistada skoori, mis põhineb sellel, kui hästi laud vastab seltskonna suurusele (et ei jääks liiga palju tühje toole) ja kliendi eelistustele.</p><br>
 
-3. <p>Visuaalne plaan Restorani suuruse ja laudade paigutuse võib vabalt valida (võib olla lihtne ruudustik või vabalt paigutatud objektid).</p><br>
+3. <p>Visuaalne plaan Restorani suuruse ja laudade paigutuse võib vabalt valida (võib olla lihtne ruudustik või vabalt paigutatud objektid).</p>
 * Hõivatud lauad peavad olema visuaalselt eristatavad.
 * Soovitatud laud peaks olema esile tõstetud.<br>
 
@@ -56,3 +56,30 @@ Kui tunned, et tahaksid teha midagi veel, et sinu töö eriliselt silma paistaks
 4) https://quickref.me/java 
 
 ## KUIDAS KAIVITADA
+1) Vaata kas on olemas Java 17 voi Maven, vajadusel, laadi neid alla
+
+```bash
+java -version
+mvn --version
+```
+
+
+2) Laadi alla repo voi klooni seda enda koodi readaktorii(kuidas seda teha on all pool)
+
+```bash
+git clone https://github.com/jackdaw5/cgi-2026
+cd repository-name
+mvn spring-boot:run
+```
+3) Mine projekti folderi
+4) Kaivita rakenduse
+
+```bash
+mvn spring-boot:run
+```
+5) Minne http://localhost:8080/
+
+## KUIDAS PROGRAMMI LOPPETADA
+1) terminalis vajuta Ctrl + C
+
+
